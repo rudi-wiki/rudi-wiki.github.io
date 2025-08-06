@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>루디위키</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+/* 헤더 스타일 */
+.top-banner {
+      width: 100%;
+      overflow: hidden;
+    }
+
+.banner-image {
+      width: 100%;          /* 전체 너비 */
+      height: auto;         /* 세로 자동 */
+      display: block;       /* 여백 제거 */
+      object-fit: contain;  /* 잘리지 않게 */
+      max-width: 100%;      /* 브라우저 너비 초과 방지 */
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 5px auto;
+      background-color: white;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    .warning {
+      background: #fdd;
+      padding: 10px;
+      border: 1px solid red;
+      margin-bottom: 20px;
+    }
+
+    .top-section {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .toc {
+      flex: 0 0 100px; /* <<< 목차 너비 줄임 */
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      height: 200px;
+    }
+
+    .toc ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .toc a {
+      text-decoration: none;
+      color: blue;
+      font-size: 14px;
+    }
+
+    .infobox {
+      width: 250px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      background-color: #fafafa;
+      flex-shrink: 0;
+    }
+
+    .infobox img {
+      max-width: 100%;
+    }
+
+    .infobox .title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .infobox table {
+      width: 100%;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .infobox {
+  width: 300px;
+  border: 1px solid #000;
+  background-color: white;
+  font-size: 16px;
+}
+
+.infobox-title {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 5px;
+  line-height: 1.4;
+}
+
+.infobox-title span {
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.infobox-image {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #000;
+}
+
+.infobox-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.infobox-table th,
+.infobox-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.infobox-table th {
+  background-color: black;
+  color: white;
+  width: 35%;
+}
+
+.infobox-table td a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.infobox-divider {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 6px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.infobox-platform {
+  padding: 10px;
+  text-align: center;
+}
+
+.infobox-platform a {
+  text-decoration: none;
+  color: black;
+  margin: 0 5px;
+  font-size: 13px;
+}
+
+.infobox-platform img {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+    .content {
+      clear: both;
+      margin-top: 20px;
+    }
+
+    blockquote {
+      background: #fff0f0;
+      padding: 10px;
+      border-left: 5px solid #f88;
+    }
+
+    .platform-icons img {
+      width: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    .rekisi {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    width: 600px;
+  }
+  </style>
+</head>
+<body>
+  <header className="top-banner">
+    <img src="https://lh3.google.com/u/0/d/19jU20gRfMxTMMLiw0DuUNhtcTSaISnrr=w3024-h1646-iv1?auditContext=prefetch" alt="배너" className="banner-image" width="100%"/>
+  </header>
+
+  <div class="container">
+    <h1>루디딕 (rubi판)</h1>
+
+    <div class="top-section">
+      <div class="toc">
+        <strong>목차</strong>
+        <ul>
+          <li><a href="#개요">1. 개요</a></li>
+          <li><a href="#특징">2. 특징</a></li>
+          <li><a href="#방송 역사">3. 방송 역사</a></li>
+          <li><a href="#밈">4. 밈</a></li>
+          <li><a href="#팬 닉네임">5. 팬 닉네임</a></li>
+          <li><a href="#소속">5. 소속</a></li>
+        </ul>
+      </div>
+
+      <div class="infobox">
+        <div class="infobox-title">
+          루디딕<br><span>Ruddig</span>
+        </div>
+        <img src="https://lh3.google.com/u/0/d/14a8vYX_XeJDfgnfHR2VYfcjonA50qZcn=w3024-h1646-iv1?auditContext=prefetch" alt="루디딕" class="infobox-image" />
+      
+        <table class="infobox-table">
+          <tr>
+            <th>활동명</th>
+            <td>루디딕</td>
+          </tr>
+          <tr>
+            <th>생일</th>
+            <td>8월 23일</td>
+          </tr>
+          <tr>
+            <th>첫 방송일</th>
+            <td>2024년 6월 17일<br>
+              <span id="days-count"></span>
+            </td>
+          </tr>
+        </table>
+      
+        <div class="infobox-divider">관련 링크</div>
+      
+        <div class="infobox-platform">
+          <a href="https://ch.sooplive.co.kr/mnomno55"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Management_SOOP_Logo.jpg" alt="SOOP" /> 그냥루디디기</a> |
+          <a href="https://www.youtube.com/@%EB%A3%A8%EB%94%94%EB%94%95RUDDIG"><img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg" alt="YouTube" /> 루디딕</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <h2 id="소속">0. 기여자</h2>
+      <hr>
+      <p>
+        루비1, 루비2
+      </p>
+    </div>
+
+    <div class="content">
+      <h1 id="개요">1. 개요</h1>
+      <blockquote>즐거우세요 🍓</blockquote>
+      <p>
+        SOOP 플랫폼에서 방송하는 버츄얼 스트리머 루디딕에 대한 문서이다.
+      </p>
+    </div>
+
+    <div class="content">
+      <h1 id="특징">2. 특징</h1>
+      <img src="https://lh3.google.com/u/0/d/12vWhk_ngygwTiRcbR69AYEFyKapHtLg4=w1148-h1646-iv1?auditContext=prefetch" alt="rekisi" class="rekisi"/>
+      <p>
+        나긋나긋한 목소리와 편안한 텐션이 강점인 스트리머이다.
+      </p>
+    </div>
+
+    <div class="content">
+      <h1 id="방송 역사">3. 방송 역사</h1>
+      <p>
+        2023년
+        <br>
+          - 5만원을 주고 버츄얼을 구매했으나, 현생에 치여 계속 미뤘다고 한다. 그 후 1년 뒤인 2024년 6월에 당시 아프리카TV에서 첫 방송을 시작했다.
+        <br>
+        2024년
+        <br>
+          - 6월 23일, 아프리카TV에서 첫 방송을 하였다.
+        <br>
+        2025년
+      </p>
+    </div>
+
+    <div class="content">
+      <h1 id="밈">4. 밈</h1>
+      <p>
+        - <b>시든 닭</b>: 루디딕이 창조해낸 표현. 컨디션이 좋지 않아 시들시들한 모습을 본 시청자가 골골대는 닭 같다는 발언을 토대로 탄생했다.
+        <br>
+        - <b>죽닭</b>: 루디딕이 창조해낸 표현. 시든 닭을 넘어 선 심신미약의 경지를 말한다.
+        <br>
+        - <b>뀨디딕 / 꾸디딕</b>: 사소한 변화를 제외하고, 최초의 버츄얼과 그 다음 버츄얼을 말한다.
+      </p>
+    </div>
+
+    <div class="content">
+      <h1 id="팬 닉네임">5. 팬 닉네임</h1>
+      <p>
+        - <b>한줌</b>: 방송 초창기 시절 '한줌이지만 소중하다'는 의미로 정해진 팬닉. 이후 루디딕이 자신의 팬들을 한줌이라고 부르고 싶지 않다고 폐기했다.
+        <br>
+        - <b>~딕</b>: '일단 딕을 붙이면 개성있다는 모 시청자의 의견으로 정해진 팬닉. 하지만 루디딕의 강한 의사에 의해 하루만에 폐기되었다.
+        <br>
+        - <b>루디~</b>: 어떻게 닉네임이 딕..
+        <br>
+        - <b>ㅪ</b>: '루디'의 줄임말이다.
+        <br>
+        - <b>루비</b>: 팬닉을 고민하고 있던 시기에 지나가던 유동이 '루디딕의 보석들' 이라는 의미로 추천해준 팬닉이다.
+      </p>
+    </div>
+
+    <div class="content">
+      <h1 id="소속">6. 소속</h1>
+      <p>
+        - 버축대2 우동사리 FC
+        <br>
+        - FC25 감드컵 시즌 2 맨체스터 꾸나이티드
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // 기준 날짜: 첫 방송일
+    const startDate = new Date('2024-06-17');
+    const today = new Date();
+  
+    // 시간차 계산 (밀리초 단위 → 일 단위로 변환)
+    const diffTime = today - startDate;
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1; // +1일째 포함
+  
+    // 출력
+    document.getElementById('days-count').textContent = `+${diffDays}일째`;
+  </script>
+</body>
+</html>
