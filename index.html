@@ -193,17 +193,18 @@
   }
 
   .collapsible:hover {
-    background-color: #f0f0f0;
+    background-color: #fff;
   }
 
   .collapsible::before {
-    content: ' ▼';
+    content: '▽';
     font-weight: bold;
-    float: right;
+    float: left;
+    margin-right: 0.5rem;
   }
 
   .collapsible.active::before {
-    content: ' ▲';
+    content: '△';
   }
 
   .collapsible-content {
