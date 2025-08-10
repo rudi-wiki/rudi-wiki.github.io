@@ -187,6 +187,35 @@
     padding-left: 4vw; /* 들여쓰기 */
   }
 
+  .collapsible {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .collapsible:hover {
+    background-color: #f0f0f0;
+  }
+
+  .collapsible::before {
+    content: ' ▼';
+    font-weight: bold;
+    float: right;
+  }
+
+  .collapsible.active::before {
+    content: ' ▲';
+  }
+
+  .collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .collapsible-content.expanded {
+    max-height: fit-content;
+  }
+
   footer {
     background-color: #f5f5f5;
     color: #888;
@@ -220,6 +249,8 @@
           <li><a href="#구독 닉네임">&nbsp&nbsp 5-2. 구독 닉네임</a></li>
           <li><a href="#소속">6. 소속</a></li>
           <li><a href="#논란">7. 논란 및 사건사고</a></li>
+          <li><a href="#루디딕 씹덕 혐오 논란">&nbsp&nbsp 7-1. 루디딕 씹덕 혐오 논란</a></li>
+          <li><a href="#마비노기 모바일 뒷배 논란">&nbsp&nbsp 7-2. 마비노기 모바일 뒷배 논란</a></li>
         </ul>
       </div>
 
@@ -275,7 +306,7 @@
         <tbody>
           <tr>
             <td class="tg-0pky">끼추</td>
-            <td class="tg-0lax">논란 및 사건사고 추가</td>
+            <td class="tg-0lax">논란 및 사건사고 추가 외</td>
           </tr>
           <tr>
             <td class="tg-0lax">루다수</td>
@@ -301,10 +332,11 @@
       </p>
     </div>
 
-    <div class="content">
-      <h2 id="RPG 악귀">2-1. RPG 악귀</h2>
-      <hr>
-      <p>
+         <div class="content">
+       <h2 id="RPG 악귀" class="collapsible">2-1. RPG 악귀</h2>
+       <div class="collapsible-content">
+         <hr>
+         <p>
         RPG를 매우매우 좋아하며 어느 컨텐츠보다 쉽게 몰입하는 경향이 있다. 밤을 새며 비방으로 즐길 정도.
         <br>
         대체로 키가 작고 안경을 끼거나 주근깨가 있는 등, 묘하게 <del>무쌩긴</del> 귀여운 커스터마이징을 좋아한다.
@@ -342,9 +374,11 @@
       <li class="sub-step">개인 방송으로 최대 시청자, 최대 유입, 최대 고정층을 이끌어낸 갓 컨텐츠</li>
       <li class="sub-step">초기 레벨업 단계에서 지루함을 느껴 접을 뻔 했으나, 갓겜임을 깨닫고 몰입하게 되었다.</li>
       <li class="sub-step">빙결술사 외길을 달리고 있다.</li>
-      <li class="sub-step">도파민에 지독하게 굶주려있다. 오직 무기 강화를 위해 다른 부위는 강화하지 않는다.</li>
-      <li class="sub-sub-step">그럼에도 불구하고 전투력은 3.4에 근접한다..</li>
-    </div>
+      <li class="sub-step">마비노기 모바일 감사 패키지를 받은 적이 있다.</li>
+               <li class="sub-step">도파민에 지독하게 굶주려있다. 오직 무기 강화를 위해 다른 부위는 강화하지 않는다.</li>
+         <li class="sub-sub-step">그럼에도 불구하고 전투력은 3.4에 근접한다..</li>
+       </div>
+     </div>
 
     <div class="content">
       <h1 id="방송 역사">3. 방송 역사</h1>
@@ -385,10 +419,11 @@
     <div class="content">
       <h1 id="팬 닉네임">5. 팬 닉네임</h1>
 
-      <div class="content">
-        <h2 id="팬덤명">5-1. 팬덤명</h2>
-        <hr>
-        <p>
+        <div class="content">
+         <h2 id="팬덤명" class="collapsible">5-1. 팬덤명</h2>
+         <div class="collapsible-content">
+           <hr>
+           <p>
           <li>
             <b>한줌단</b>
             <br>
@@ -401,18 +436,20 @@
             ‘루디’가 루돌프란 뜻이 있음을 발견하고 정한 팬덤명. 하지만 부르기 오글거린다면서 금방 버렸다.
           </li>
           <br>
-          <li>
-            <b>루비단</b>
-            <br>
-            팬닉을 고민하고 있던 시기에 지나가던 유동이 '루디딕의 보석들' 이라는 의미로 추천해준 팬닉이다. 정작 추천해준 유동은 다시 찾아오지 않는다고 한다..
-          </li>
-        </p>
-      </div>
+                     <li>
+             <b>루비단</b>
+             <br>
+             팬닉을 고민하고 있던 시기에 지나가던 유동이 '루디딕의 보석들' 이라는 의미로 추천해준 팬닉이다. 정작 추천해준 유동은 다시 찾아오지 않는다고 한다..
+           </li>
+         </p>
+       </div>
+     </div>
 
-      <div class="content">
-        <h2 id="구독 닉네임">5-2. 구독 닉네임</h2>
-        <hr>
-        <p>
+             <div class="content">
+         <h2 id="구독 닉네임" class="collapsible">5-2. 구독 닉네임</h2>
+         <div class="collapsible-content">
+           <hr>
+           <p>
           <li>
             <b>한줌</b>
           </li>
@@ -428,12 +465,13 @@
           <li>
             <b>루~</b>
           </li>
-          <li>
-            <b>디딕이네 / 디디기네</b>
-          </li>
-        </p>
-      </div>
-    </div>
+                     <li>
+             <b>디딕이네 / 디디기네</b> : 일부 시청자에 의해 시작된 구독 닉네임으로, 비공식임에도 불구하고 많은 시청자들이 사용하고 있다.
+           </li>
+         </p>
+       </div>
+     </div>
+     </div>
 
     <div class="content">
       <h1 id="소속">6. 소속</h1>
@@ -447,13 +485,16 @@
         <li>
           버인협회 1기,2기(텐도련)
         </li>
+        <li>
+          마비노기 모바일 ‘루디딕’ 길드 (아이라, 길드장)
+        </li>
       </p>
     </div>
 
     <div class="content">
       <h1 id="논란">7. 논란 및 사건사고</h1>
-      <ol>
-        <li>루디딕 씹덕 혐오 논란</li>
+      <h2 id="루디딕 씹덕 혐오 논란" class="collapsible">7-1. 루디딕 씹덕 혐오 논란</h2>
+      <div class="collapsible-content">
         <img src="https://lh3.google.com/u/0/d/1M6dJGAn8kaA4By0Qh6_ApPzH7xKiieWd=w3024-h1646-iv1?auditContext=prefetch" alt="sipduk" class="nonran"/>
         <br>
         2025년 2월 28일, 루디딕이 라이브 방송 중 시청자와 나눈 대화 내용이 논란이 되었다.<br>
@@ -464,7 +505,20 @@
         이후 일본 가수에 대해 언급하던 도중, 시청자가 “씹덕이세요?”라고 질문하자, 루디딕은 “나는 다르다 이 씹덕들아”라는 발언을 하였다.
         <br><br>
         이 대화 내용은 방송 이후 일부 시청자들 사이에서 비하 표현 사용 여부와 관련해 논의가 이루어졌다.
-      </ol>
+      </div>
+
+      <br>
+
+      <h2 id="마비노기 모바일 뒷배 논란" class="collapsible">7-2. 마비노기 모바일 뒷배 논란</h2>
+      <div class="collapsible-content">
+        루디딕은 평소 온라인 게임 마비노기 모바일을 플레이하며, 낮은 확률의 성공을 반복적으로 성공한 사례가 다수 방송에서 관찰되었다.<br>
+        이러한 장면은 영상 콘텐츠(일명 ‘비틱’ 영상)로도 제작되어 게시되었으며, 일부 시청자들에게 직접적인 조롱과 기만을 일삼기도 했다.
+        <br><br>
+        그러나 통상 근무 시간이 지난 새벽, 루디딕이 전설 등급 패션 합성에 연속적으로 실패한 뒤 잠시 마이크를 비활성화하고 어디론가 전화를 거는 모습이 방송 화면에 포착되었다.<br>
+        이후 복귀한 루디딕이 합성에 성공하는 장면이 이어지면서, 일부 시청자들 사이에서는 운영자와의 비공식적 연결 가능성을 제기하는 추측이 등장하였다.
+        <br><br>
+        그러나 이러한 의혹을 입증할만한 객관적 증거는 아직 공개되지 않았다.
+      </div>
     </div>
 
     <div class="content">
@@ -498,6 +552,19 @@
   
     // 출력
     document.getElementById('days-count').textContent = `+${diffDays}일째`;
+
+    // 접기/펼치기 기능
+    document.addEventListener('DOMContentLoaded', function() {
+      const collapsibles = document.querySelectorAll('.collapsible');
+      
+      collapsibles.forEach(function(collapsible) {
+        collapsible.addEventListener('click', function() {
+          this.classList.toggle('active');
+          const content = this.nextElementSibling;
+          content.classList.toggle('expanded');
+        });
+      });
+    });
   </script>
 </body>
 </html>
