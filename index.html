@@ -332,10 +332,11 @@
       </p>
     </div>
 
-         <div class="content">
+      <div class="content">
        <h2 id="RPG 악귀" class="collapsible">2-1. RPG 악귀</h2>
+       <hr>
        <div class="collapsible-content">
-         <hr>
+
          <p>
         RPG를 매우매우 좋아하며 어느 컨텐츠보다 쉽게 몰입하는 경향이 있다. 밤을 새며 비방으로 즐길 정도.
         <br>
@@ -421,8 +422,8 @@
 
         <div class="content">
          <h2 id="팬덤명" class="collapsible">5-1. 팬덤명</h2>
+         <hr>
          <div class="collapsible-content">
-           <hr>
            <p>
           <li>
             <b>한줌단</b>
@@ -445,10 +446,10 @@
        </div>
      </div>
 
-             <div class="content">
+      <div class="content">
          <h2 id="구독 닉네임" class="collapsible">5-2. 구독 닉네임</h2>
+         <hr>
          <div class="collapsible-content">
-           <hr>
            <p>
           <li>
             <b>한줌</b>
@@ -494,6 +495,7 @@
     <div class="content">
       <h1 id="논란">7. 논란 및 사건사고</h1>
       <h2 id="루디딕 씹덕 혐오 논란" class="collapsible">7-1. 루디딕 씹덕 혐오 논란</h2>
+      <hr>
       <div class="collapsible-content">
         <img src="https://lh3.google.com/u/0/d/1M6dJGAn8kaA4By0Qh6_ApPzH7xKiieWd=w3024-h1646-iv1?auditContext=prefetch" alt="sipduk" class="nonran"/>
         <br>
@@ -502,7 +504,7 @@
         그 과정에서 일본 문화를 선호하는 것으로 알려진 특정 시청자를 언급하며, 해당 시청자가 좋아하는 곡을 재생해 주겠다고 말했다.
         <br><br>
         시청자가 일본 노래를 선호한다고 밝히자, 루디딕은 “혹시 설마 씹덕?”이라는 표현을 사용한 뒤 일본 노래를 재생하였다.<br>
-        이후 일본 가수에 대해 언급하던 도중, 시청자가 “씹덕이세요?”라고 질문하자, 루디딕은 “나는 다르다 이 씹덕들아”라는 발언을 하였다.
+        이후 일본 가수에 대해 언급하던 도중, 시청자가 “씹덕이세요?”라고 질문하자, 루디딕은 “나는 다르다", "이 씹덕들이 진짜” 등의 발언을 하였다.
         <br><br>
         이 대화 내용은 방송 이후 일부 시청자들 사이에서 비하 표현 사용 여부와 관련해 논의가 이루어졌다.
       </div>
@@ -510,6 +512,7 @@
       <br>
 
       <h2 id="마비노기 모바일 뒷배 논란" class="collapsible">7-2. 마비노기 모바일 뒷배 논란</h2>
+      <hr>
       <div class="collapsible-content">
         루디딕은 평소 온라인 게임 마비노기 모바일을 플레이하며, 낮은 확률의 성공을 반복적으로 성공한 사례가 다수 방송에서 관찰되었다.<br>
         이러한 장면은 영상 콘텐츠(일명 ‘비틱’ 영상)로도 제작되어 게시되었으며, 일부 시청자들에게 직접적인 조롱과 기만을 일삼기도 했다.
@@ -537,7 +540,7 @@
 
   <footer>
     <p>
-      본 페이지는 비영리 목적으로 운영되며, 모든 정보는 팬이 작성한 비공식 자료입니다.
+      본 페이지는 비영리 목적으로 운영되며,<br>모든 정보는 팬이 작성한 비공식 자료로 검증되지 않은 내용이 포함될 수 있습니다.
     </p>
   </footer>
 
@@ -560,8 +563,14 @@
       collapsibles.forEach(function(collapsible) {
         collapsible.addEventListener('click', function() {
           this.classList.toggle('active');
-          const content = this.nextElementSibling;
-          content.classList.toggle('expanded');
+          // hr 다음의 collapsible-content를 찾기
+          let nextElement = this.nextElementSibling;
+          while (nextElement && !nextElement.classList.contains('collapsible-content')) {
+            nextElement = nextElement.nextElementSibling;
+          }
+          if (nextElement) {
+            nextElement.classList.toggle('expanded');
+          }
         });
       });
     });
